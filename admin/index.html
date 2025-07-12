@@ -6,11 +6,13 @@
     <script src="https://unpkg.com/netlify-cms@^2.0.0/dist/netlify-cms.js"></script>
   </head>
   <body>
-    <!-- Required div where CMS will render -->
     <script>
-      const cmsRoot = document.createElement('div');
-      cmsRoot.id = 'nc-root';
-      document.body.appendChild(cmsRoot);
+      window.addEventListener('DOMContentLoaded', () => {
+        const el = document.createElement('div');
+        el.id = 'cms';
+        document.body.appendChild(el);
+        NetlifyCms.init();
+      });
     </script>
   </body>
 </html>
