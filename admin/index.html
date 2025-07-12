@@ -3,21 +3,10 @@
   <head>
     <meta charset="utf-8" />
     <title>Content Manager</title>
+    <!-- Correct Netlify CMS script -->
     <script src="https://unpkg.com/netlify-cms@^2.10.192/dist/netlify-cms.js"></script>
   </head>
   <body>
-    <script>
-      window.CMS_MANUAL_INIT = true;
-    </script>
-    <script>
-      window.addEventListener('DOMContentLoaded', () => {
-        if (window.CMS && typeof window.CMS.init === 'function') {
-          window.CMS.init();
-        } else {
-          console.error("Netlify CMS failed to load.");
-        }
-      });
-    </script>
-    <div id="nc-root"></div>
+    <!-- Do NOT run CMS.init() yourself -->
   </body>
 </html>
