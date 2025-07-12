@@ -1,8 +1,7 @@
 backend:
-  name: git-gateway
+  name: github
+  repo: Mako923/cartransportreviews
   branch: main
-  identity_url: https://astounding-mousse-c7bb1c.netlify.app/.netlify/identity
-  gateway_url: https://astounding-mousse-c7bb1c.netlify.app/.netlify/git
 
 media_folder: "images/uploads"
 public_folder: "/images/uploads"
