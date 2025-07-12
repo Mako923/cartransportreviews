@@ -6,13 +6,16 @@
     <script src="https://unpkg.com/netlify-cms@^2.0.0/dist/netlify-cms.js"></script>
   </head>
   <body>
+    <!-- This is the required CMS mount point -->
     <script>
       window.addEventListener('DOMContentLoaded', () => {
         const el = document.createElement('div');
         el.id = 'cms';
         document.body.appendChild(el);
-        NetlifyCms.init();
       });
+    </script>
+    <script>
+      window.CMS.init();
     </script>
   </body>
 </html>
