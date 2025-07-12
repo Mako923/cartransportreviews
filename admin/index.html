@@ -6,6 +6,11 @@
     <script src="https://unpkg.com/netlify-cms@^2.0.0/dist/netlify-cms.js"></script>
   </head>
   <body>
-    <div id="nc-root"></div>
+    <!-- Required div where CMS will render -->
+    <script>
+      const cmsRoot = document.createElement('div');
+      cmsRoot.id = 'nc-root';
+      document.body.appendChild(cmsRoot);
+    </script>
   </body>
 </html>
