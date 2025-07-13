@@ -3,22 +3,22 @@
   <head>
     <meta charset="utf-8" />
     <title>Content Manager</title>
-    <script src="https://unpkg.com/netlify-cms@^2.0.0/dist/netlify-cms.js"></script>
+    <!-- Properly load Netlify CMS -->
+    <script src="https://unpkg.com/netlify-cms@^2.10.0/dist/netlify-cms.js"></script>
   </head>
   <body>
-    <!-- This script runs only after CMS is loaded -->
+    <!-- This div is required for CMS to mount -->
     <script>
-      if (typeof window.CMS !== 'undefined') {
-        window.CMS.init();
-      } else {
-        document.addEventListener('DOMContentLoaded', function () {
-          if (typeof window.CMS !== 'undefined') {
-            window.CMS.init();
-          } else {
-            console.error("Netlify CMS failed to load.");
-          }
-        });
-      }
+      window.addEventListener('DOMContentLoaded', function () {
+        const el = document.createElement('div');
+        el.id = 'nc-root';
+        document.body.appendChild(el);
+        if (window.CMS) {
+          window.CMS.init();
+        } else {
+          console.error("Netlify CMS failed to load.");
+        }
+      });
     </script>
   </body>
 </html>
